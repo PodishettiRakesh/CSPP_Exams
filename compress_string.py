@@ -17,8 +17,6 @@ def compress_string(s):
     return output     
 
 
-
-
 assert compress_string("aabcccccaaa") == "a2b1c5a3"
 assert compress_string("abcd") == "a1b1c1d1"  # "a1b1c1d1" is longer than "abcd"
 assert compress_string("aaAAaa") == "a2A2a2"
