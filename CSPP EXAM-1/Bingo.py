@@ -88,3 +88,52 @@ def checkWinner(grid):
             if each!="_" and each!="x":
                 return False
     return True
+
+
+def main():
+    print("welcome to the bingo multiplayer game")
+    grid1=emptyGrid(5,5)
+    grid2=emptyGrid(5,5)
+    count=0
+    user_numbers=[]
+    while count<16:
+        print(f"your numbers:{user_numbers}")
+        try:
+            num=int(input("enter your unique number between 1 and 25: "))
+            if num not in user_numbers or 1>=num<=25:
+                user_numbers.append(num)
+                count+=1
+            else:
+                print("number already present , please find unique or check number between  1 and 25 ")
+        except ValueError:
+            print("invalid inputs")
+    # user_numbers=[1,2,3,5,6,7,12,13,14,15,18,19,20,21,22,23]
+    comp_numbers=[1,2,3,6,7,12,8,13,14,15,18,19,20,21,22,23]
+    # comp_reaming_nums=[1,2,3,6,7,12,8,13,14,15,18,19,20,21,22,23]
+
+    user_grid=populateGrid(grid1,user_numbers)
+    compu_grid=populateGrid(grid2,comp_numbers)
+
+    currentPlayer=0
+    player=["your","computer"]
+    while True:
+        print("your current board")
+        displayGrid(user_grid)
+        print("computer current baord")
+        displayGrid(compu_grid)
+        print(f"{player[currentPlayer]} turn now")
+        if currentPlayer==0:
+            number=getUserNumber()
+            user_grid,compu_grid=userTurn(user_grid,compu_grid,number)
+        if currentPlayer==1:
+            user_grid,compu_grid=computerTurn(user_grid,compu_grid)
+        if checkWinner(user_grid):
+            return f"your the winner"
+        
+        if checkWinner(compu_grid):
+            return f"computer is winner"
+        else:
+            currentPlayer=1-currentPlayer
+        
+
+print(main())
