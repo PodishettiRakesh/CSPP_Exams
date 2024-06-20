@@ -46,3 +46,10 @@ def displayGrid(grid):
                 print("*",end="  ")
         print()
 
+def userTurn(user_grid,computer_grid,number):
+    for i in range(len(user_grid)):
+        for j in range(len(user_grid[0])):
+            if user_grid[i][j]==number:
+                print("hello")
+                print(user_grid[i][j])
+                user_grid[i][j]="x"
