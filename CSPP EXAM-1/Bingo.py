@@ -61,3 +61,20 @@ def userTurn(user_grid,computer_grid,number):
                 print(computer_grid[i][j])
                 computer_grid[i][j]="x"
     return user_grid,computer_grid
+
+
+def computerTurn(user_grid,computer_grid):
+    number=0
+    while True:
+        row=random.choice([0,1,2,3,4])
+        col=random.choice([0,1,2,3,4])
+        if computer_grid[row][col]!="_" and computer_grid[row][col]!="x":
+            number+=computer_grid[row][col]
+            computer_grid[row][col]="x"
+            break
+    print(number,"number")
+    for i in range(len(user_grid)):
+        for j in range(len(user_grid[0])):
+            if user_grid[i][j]==number:
+                user_grid[i][j]="x"
+    return user_grid,computer_grid 
