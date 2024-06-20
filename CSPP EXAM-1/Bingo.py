@@ -7,10 +7,7 @@ def emptyGrid(rows,cols):
             s.append("_")
         grid.append(s)
     return grid
-# print(emptyGrid(5,5))
 
-
-# print(numbers)
 def populateGrid(grid,numbers):
     count=0
     while count<16:
@@ -20,9 +17,6 @@ def populateGrid(grid,numbers):
             grid[row][col]=numbers.pop()
             count+=1
     return grid
-# numbers=random.sample(range(1,25),16)
-# grid=emptyGrid(5,5)
-# print(populateGrid(grid,numbers))
 
 def getUserNumber():
     while True:
@@ -107,9 +101,9 @@ def main():
                 print("number already present , please find unique or check number between  1 and 25 ")
         except ValueError:
             print("invalid inputs")
-    # user_numbers=[1,2,3,5,6,7,12,13,14,15,18,19,20,21,22,23]
+
     comp_numbers=[1,2,3,6,7,12,8,13,14,15,18,19,20,21,22,23]
-    # comp_reaming_nums=[1,2,3,6,7,12,8,13,14,15,18,19,20,21,22,23]
+
 
     user_grid=populateGrid(grid1,user_numbers)
     compu_grid=populateGrid(grid2,comp_numbers)
