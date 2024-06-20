@@ -54,3 +54,11 @@ def display_Grid(grid):
                 print('.',end=' ')
         print()
     print()
+
+
+def markNumber(grid, number):
+    for i in range(5):
+        for j in range(5):
+            if grid[i][j]==number:
+                grid[i][j]='x'
+    return grid
