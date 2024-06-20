@@ -53,3 +53,11 @@ def userTurn(user_grid,computer_grid,number):
                 print("hello")
                 print(user_grid[i][j])
                 user_grid[i][j]="x"
+
+    for i in range(len(computer_grid)):
+        for j in range(len(computer_grid[0])):
+            if computer_grid[i][j]==number:
+                print("hello")
+                print(computer_grid[i][j])
+                computer_grid[i][j]="x"
+    return user_grid,computer_grid
