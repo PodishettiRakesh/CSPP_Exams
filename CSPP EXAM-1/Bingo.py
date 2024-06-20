@@ -62,3 +62,10 @@ def markNumber(grid, number):
             if grid[i][j]==number:
                 grid[i][j]='x'
     return grid
+
+def checkWinner(grid):
+    for row in grid:
+        for each in row:
+            if each is not None and each != 'x':
+                return False
+    return True
