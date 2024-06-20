@@ -23,3 +23,19 @@ def populate_grid(grid, numbers):
                 x.add((row, col))
                 break
     return grid
+
+def getUserNumbers():
+    user_numbers = []
+    while len(user_numbers) < 16:
+        try:
+            num = int(input(f"Enter number {len(user_numbers) + 1}/16 (between 1 and 25): "))
+            if num < 1 or num > 25:
+                print("number is not valid.")
+            elif num in user_numbers:
+                print("number already chosen.")
+            else:
+                user_numbers.append(num)
+        except ValueError:
+            print("Invalid input.")
+    return user_numbers
+# getUserNumbers()
