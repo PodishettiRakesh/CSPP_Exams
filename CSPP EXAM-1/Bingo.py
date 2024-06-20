@@ -78,3 +78,13 @@ def computerTurn(user_grid,computer_grid):
             if user_grid[i][j]==number:
                 user_grid[i][j]="x"
     return user_grid,computer_grid 
+
+
+
+def checkWinner(grid):
+    for row in grid:
+        for each in row:
+            # print(each)
+            if each!="_" and each!="x":
+                return False
+    return True
