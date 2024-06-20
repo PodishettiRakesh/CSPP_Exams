@@ -43,3 +43,14 @@ def getUserNumbers():
 
 def generateComputerNumbers():
     return random.sample(range(1,25),16)
+
+
+def display_Grid(grid):
+    for r in grid:
+        for n in r:
+            if n is not None:
+                print('n',end=' ')
+            else:
+                print('.',end=' ')
+        print()
+    print()
