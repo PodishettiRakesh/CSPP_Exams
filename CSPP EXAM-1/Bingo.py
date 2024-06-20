@@ -39,3 +39,7 @@ def getUserNumbers():
             print("Invalid input.")
     return user_numbers
 # getUserNumbers()
+
+
+def generateComputerNumbers():
+    return random.sample(range(1,25),16)
