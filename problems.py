@@ -5,6 +5,7 @@ def printMultiplesOfThree():
 # printMultiplesOfThree()
 
 def checkNumber():
+    for i in range(50):
 
     
 
