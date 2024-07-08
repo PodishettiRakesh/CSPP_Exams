@@ -10,7 +10,9 @@ def checkNumber():
             print("even number")
         elif(i%2==1):
             print("odd number")
-            
+        else:
+            print("zero")
+
 
     
 
