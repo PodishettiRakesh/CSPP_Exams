@@ -8,6 +8,9 @@ def checkNumber():
     for i in range(50):
         if(i%2==0):
             print("even number")
+        elif(i%2==1):
+            print("odd number")
+            
 
     
 
