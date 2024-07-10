@@ -5,4 +5,5 @@
 # # printStudents(dic)
 
 def printKeys(dic):
-    
+    for key in dic.keys():
+        print(key)
