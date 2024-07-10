@@ -10,4 +10,6 @@ def printKeys(dic):
 printKeys(dic)
 
 def printValues(dic):
-    
+    for values in dic.values():
+        print(values)
+printValues(dict)
